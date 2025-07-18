@@ -134,3 +134,6 @@ class TapHubSpot(Tap):
             PluginCapabilities.FLATTENING,
             PluginCapabilities.BATCH,
         ]
+
+if __name__ == "__main__":
+    TapHubSpot.cli()

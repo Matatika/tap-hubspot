@@ -78,7 +78,7 @@ class ContactsStream(HubSpotStream):
 
     @property
     def replication_key(self) -> Optional[str]:
-        return None if self.config.get("no_search", False) else "hs_lastmodifieddate"
+        return None if self.config.get("no_search", False) else "lastmodifieddate"
 
     @replication_key.setter
     def replication_key(self, _):

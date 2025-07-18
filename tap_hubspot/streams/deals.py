@@ -175,7 +175,7 @@ class DealsStream(HubSpotStream):
             "hs_is_closed_won",
             "hs_is_deal_split",
             "hs_is_open_count",
-            "hs_lastmodifieddate",
+            "lastmodifieddate",
             "hs_likelihood_to_close",
             "hs_manual_forecast_category",
             "hs_merged_object_ids",
@@ -276,7 +276,7 @@ class DealsStream(HubSpotStream):
 
     @property
     def replication_key(self) -> Optional[str]:
-        return None if self.config.get("no_search", False) else "hs_lastmodifieddate"
+        return None if self.config.get("no_search", False) else "lastmodifieddate"
 
     @replication_key.setter
     def replication_key(self, _):
